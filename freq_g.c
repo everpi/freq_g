@@ -124,9 +124,9 @@ int main(int argc, char *argv[]){
 	printf("Frequency:%f\n", sum);
 	printf("Normal divisor:%f\n",clock / sum);
 	printf("Divisor:%d\n",(int)((clock / sum ) * (float)(1<<12) + 0.5));	
-	*(volatile uint32_t *)((uint32_t)map+CM_GP0DIV) = (0x5a << 24) + 1<<12;
-							 /*(int)( (clock / sum ) * 
-					                 (float)(1<<12) + 0.5 );*/
+	*(volatile uint32_t *)((uint32_t)map+CM_GP0DIV) = (0x5a << 24) + 
+				  		  (int)( (clock / sum ) * 
+					                 (float)(1<<12) + 0.5 );
 
 	err = munmap((uint32_t *)map,MAPSIZE);	
 	_ERR(err);
