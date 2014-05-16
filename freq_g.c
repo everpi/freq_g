@@ -1,7 +1,3 @@
-/*
- *	GPCLK0 Frequency Controller by blog.everpi.net
- *
- */
 /*  
  *  GPCLK0 Frequency Controller for Raspberry Pi
  *
